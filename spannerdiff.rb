@@ -5,22 +5,22 @@
 class Spannerdiff < Formula
   desc ""
   homepage ""
-  version "1.1.0"
+  version "1.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/morikuni/spannerdiff/releases/download/v1.1.0/spannerdiff_1.1.0_darwin_amd64.tar.gz"
-      sha256 "20c95bb5937e6b7af378b024b954712bbdb4361acd2307c46d625c60b7e953a4"
+      url "https://github.com/morikuni/spannerdiff/releases/download/v1.2.0/spannerdiff_1.2.0_darwin_amd64.tar.gz"
+      sha256 "c2fe706b9db087bef487861cc6b310568c09619eb6b66093b6f2771bbc75f8f8"
 
-      def install
+      define_method(:install) do
         bin.install "spannerdiff"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/morikuni/spannerdiff/releases/download/v1.1.0/spannerdiff_1.1.0_darwin_arm64.tar.gz"
-      sha256 "5f7bfcbf657909f787c7fa0ebffd55dd56d08dbc98d994f14d830394f2c040d9"
+      url "https://github.com/morikuni/spannerdiff/releases/download/v1.2.0/spannerdiff_1.2.0_darwin_arm64.tar.gz"
+      sha256 "9e724b4aa97010b622925e967ff7f3f812f6235e76480baf5f2db5f290e9729c"
 
-      def install
+      define_method(:install) do
         bin.install "spannerdiff"
       end
     end
@@ -28,16 +28,16 @@ class Spannerdiff < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/morikuni/spannerdiff/releases/download/v1.1.0/spannerdiff_1.1.0_linux_amd64.tar.gz"
-      sha256 "b06dfefcdcaeaf61d556e2671773abbc9cba322d8820fdb3de5b68d565113d7a"
-      def install
+      url "https://github.com/morikuni/spannerdiff/releases/download/v1.2.0/spannerdiff_1.2.0_linux_amd64.tar.gz"
+      sha256 "eaed09cacbd24aa9c50b7b0edf40d2ea97591939806d624b930e1de0e455fcf6"
+      define_method(:install) do
         bin.install "spannerdiff"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/morikuni/spannerdiff/releases/download/v1.1.0/spannerdiff_1.1.0_linux_arm64.tar.gz"
-      sha256 "f3e30d0d307772a5441bb30b7a9c59495413e4eb9ece19f6479e2dd133708dba"
-      def install
+      url "https://github.com/morikuni/spannerdiff/releases/download/v1.2.0/spannerdiff_1.2.0_linux_arm64.tar.gz"
+      sha256 "71b1d51c8489892d4542ecebb7756c3c31f6dfb93d88072d77b5aab79db198e3"
+      define_method(:install) do
         bin.install "spannerdiff"
       end
     end
